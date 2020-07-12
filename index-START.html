@@ -19,6 +19,7 @@
   let lastX = 0;
   let lastY = 0;
   let direction = true;
+  let dir = false;
   let saturation = 60;
   let lightness = 40;
 
@@ -41,29 +42,40 @@
 
 
 
-
+/*
     saturation++;
     if (saturation >=90){
       saturation--;
-    }
+    }*/
 
-    lightness++;
+   /* lightness++;
     if (lightness >=90){
       lightness = 10;
-    }
+    }*/
 
-
-
-   /* if (ctx.lineWidth >= 100 || ctx.lineWidth <=1){
+    if (lightness >= 40 || lightness <=10){
       direction = !direction;
 
     }
 
     if (direction){
-      ctx.lineWidth++;
+      lightness++;
     } else {
-      ctx.lineWidth--;
-    }*/
+      lightness--;
+    }
+
+
+
+  if (saturation >= 60 || saturation <=10){
+      dir = !dir;
+
+    }
+
+    if (dir){
+      saturation++;
+    } else {
+      saturation--;
+    }
   }
 
   
